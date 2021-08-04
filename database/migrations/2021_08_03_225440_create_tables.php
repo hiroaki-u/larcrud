@@ -20,9 +20,32 @@ class CreateTables extends Migration
 
             $table->timestamps();
 
-            $table->unique('[user_id, follow_id]');
-            $table->foreign('user_id')->refereces('id')->on('users');
-            $table->foreign('follow_id')->refereces('id')->on('users');
+            $table->unique(['user_id', 'follow_id']);
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('follow_id')->references('id')->on('users');
+        });
+
+        Schema::create('books', function (Blueprint $table){
+            $table->id();
+
+            $table->string('author');
+            $table->string('genre');
+            $table->string('item_url');
+
+            $table->timestamps();
+        });
+
+        
+        Schema::create('reviews', function (Blueprint $table){
+            $table->id();
+            
+            $table->text('content');
+            $table->unsignedBiginteger('user_id');
+            $table->unsignedBiginteger('book_id');
+            $table->timestamps();
+            
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('book_id')->references('id')->on('books');
         });
 
         Schema::create('comments', function (Blueprint $table) {
@@ -36,9 +59,8 @@ class CreateTables extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('review_id')->reference('id')->on('users');
+            $table->foreign('review_id')->references('id')->on('reviews');
         });
-
 
         Schema::create('likes', function (Blueprint $table){
             $table->id();
@@ -48,31 +70,9 @@ class CreateTables extends Migration
 
             $table->timestamps();
 
-            $table->unique('[user_id, review_id]');
-            $table->foreign('user_id')->refereces('id')->on('users');
-            $table->foreign('review_id')->refereces('id')->on('reviews');
-        });
-
-        Schema::create('reviews', function (Blueprint $table){
-            $table->id();
-
-            $table->text('content');
-            $table->unsignedBiginteger('user_id');
-            $table->unsignedBiginteger('book_id');
-            $table->timestamps();
-
-            $table->foreign('user_id')->refereces('id')->on('users');
-            $table->foreign('book_id')->refereces('id')->on('books');
-        });
-
-        Schema::create('books', function (Blueprint $table){
-            $table->id();
-
-            $table->string('author');
-            $table->string('genre');
-            $table->string('item_url');
-
-            $table->timestamps();
+            $table->unique(['user_id', 'review_id']);
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('review_id')->references('id')->on('reviews');
         });
     }
 
