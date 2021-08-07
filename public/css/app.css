@@ -10002,3 +10002,392 @@ h3 {
     border-color: #dee2e6;
   }
 }
+/*-----------------------*/
+/*--色の設定--*/
+/*-----------------------*/
+/*-----------------------*/
+/*--ページ全体--*/
+/*-----------------------*/
+body {
+  background-color: #ffffff;
+  word-wrap: break-word;
+}
+
+#wrap {
+  overflow: hidden;
+}
+
+.field_with_errors {
+  display: contents;
+}
+
+/*-----------------------*/
+/*--配置関連--*/
+/*-----------------------*/
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+
+.subscript {
+  vertical-align: sub;
+}
+
+@media screen and (max-width: 540px) {
+  .sm-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .md-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 960px) {
+  .lg-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .md-block {
+    display: block !important;
+  }
+}
+.md-appear {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .md-appear {
+    display: block;
+  }
+}
+.lg-appear {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .lg-appear {
+    display: block !important;
+  }
+}
+.margin-0 {
+  margin: 0;
+}
+
+.bg-gray {
+  background-color: #f9f9f9;
+}
+
+/*-----------------------*/
+/*--文字--*/
+/*-----------------------*/
+a {
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.txt-xxs {
+  font-size: 12px;
+}
+
+.txt-xs {
+  font-size: 16px;
+}
+
+.txt-s {
+  font-size: 20px;
+}
+
+.txt-m {
+  font-size: 24px;
+}
+
+.txt-l {
+  font-size: 30px;
+}
+
+.txt-xl {
+  font-size: 36px;
+}
+
+.txt-xxl {
+  font-size: 42px;
+}
+
+.txt-black {
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+}
+
+.thin-font {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.sentence-font {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  line-height: 25px;
+}
+
+/*-----------------------*/
+/*--見出し文字--*/
+/*-----------------------*/
+.headline {
+  margin: 0 auto;
+  display: inline-block;
+  box-shadow: 0 -6px 0 0 #3c6ea6 inset;
+}
+
+/*-----------------------*/
+/*--共通ボタン--*/
+/*-----------------------*/
+.submit-btn {
+  background-color: #293c6f;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 5px;
+  border: none;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+/*-----------------------*/
+/*--画像--*/
+/*-----------------------*/
+.profile-image {
+  width: 170px;
+  height: 170px;
+  border-radius: 15px;
+  border: 1px solid #dcdcdc;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+}
+
+.user-image-l {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+}
+
+.book-image {
+  width: 150px;
+  heihgt: auto;
+  border: 1px solid #dcdcdc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-image-l {
+  width: 175px;
+  heihgt: auto;
+  border: 1px solid #dcdcdc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*画面サイズ変更時の画像*/
+@media screen and (max-width: 992px) {
+  .user-image {
+    width: 65px;
+    height: 65px;
+    border-radius: 7px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: -10px;
+  }
+
+  .row {
+    margin: 0;
+  }
+}
+/*-----------------------*/
+/*--登録ページ(users/new, sessions/new)--*/
+/*-----------------------*/
+.form-item {
+  border: 1px solid #dcdcdc;
+}
+
+.form-item:nth-child(5) {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.form-item .field_with_errors {
+  border: 1px solid #dcdcdc;
+}
+
+.form-label {
+  display: block;
+  width: 40%;
+  background-color: #f4f4f4;
+  margin: 2px 0;
+  padding: 25px 0 25px 5px;
+  font-weight: bold;
+}
+
+.form-input {
+  display: block;
+  width: 60%;
+  height: 30px;
+  margin: 25px 15px;
+}
+
+/*新規登録*/
+/*ログイン*/
+.guest-btn {
+  background-color: #ef534b;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.guest-btn:hover {
+  opacity: 0.8;
+  color: #fff;
+}
+
+.login-submit {
+  text-align: center;
+  justify-content: center;
+}
+
+/*プロフィール更新*/
+.gender {
+  margin: 0;
+}
+
+.form-label-introduction {
+  display: block;
+  width: 40%;
+  background-color: #f4f4f4;
+  margin: 2px 0;
+  padding: 50px 0 42px 5px;
+  font-weight: bold;
+}
+
+.form-input-introduction {
+  display: block;
+  width: 60%;
+  margin: 25px 15px;
+}
+
+/*-----------------------*/
+/*--ユーザーのプロフィールページ(users/show)--*/
+/*-----------------------*/
+.user-page-bar-lists {
+  display: flex;
+  width: 100%;
+}
+
+.user-page-bar {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  height: 72px;
+}
+
+.user-page-bar-list {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 68px;
+}
+
+.user-page-bar-list a {
+  font-weight: bold;
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .user-page-bar {
+    height: auto;
+  }
+
+  .user-page-bar-lists {
+    display: block;
+  }
+
+  .user-page-bar-list {
+    line-height: 30px;
+  }
+
+  .row {
+    margin: 0;
+  }
+}
+.user-page-bar-list a:not(.page-active):hover {
+  background-color: #dcdcdc;
+  border-bottom: 3px solid #dcdcdc;
+}
+
+.page-active {
+  border-bottom: 3px solid #293c6f;
+}
+
+/*-----------------------*/
+/*--フォローページ(_follow_user)(followings, followers)--*/
+/*-----------------------*/
+.follow-user {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.follow-user-content {
+  width: 100%;
+}
+
+.follow-user-info {
+  width: 30px;
+}
+
+.follow-btn {
+  border: 1px solid #2dacdb;
+  background-color: #fff;
+  padding: 2.5px 10px;
+  border-radius: 15px;
+  outline: none;
+  color: #2dacdb;
+}
+
+.follow-btn:focus,
+.unfollow-btn:focus {
+  outline: none;
+}
+
+.unfollow-btn {
+  border: 1px solid #888888;
+  background-color: #fff;
+  padding: 2.5px 10px;
+  border-radius: 15px;
+}
+
+.unfollow-btn:hover {
+  background-color: #eeeeee;
+}
+
+.follow-user-name {
+  display: flex;
+  justify-content: space-between;
+}

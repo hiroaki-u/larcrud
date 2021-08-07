@@ -1,6 +1,64 @@
-@extends('layouts.app')
+@extends('layouts.app_content')
+
+@section('title')
+会員登録
+@endsection
 
 @section('content')
+<div class="text-center">
+  <p class="txt-xl headline mb-5 mt-5">会員登録</p>
+</div>
+
+<div class="row mb-5">                                                                           
+  <div class="offset-sm-2 col-sm-8">
+    <form action="{{ route('register') }}" method="POST">
+      @csrf
+      <div class="form-item flex">
+        <label for="name" class="form-label">{{ __('名前') }}</label>
+        <input type="text" id="name" class="form-input @error('name') is-valid @enderror" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" placeholder="名前を入力してください">
+        @error('name')
+          <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+          </span>
+        @enderror
+      </div>
+      <div class="form-item flex">
+        <label for="email" class="form-label">{{__('メールアドレス')}}</label>
+        <input type="email" id="email" class="form-input @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" required autofocus placeholder="メールアドレスを入力してください">
+      </div>
+      @error('email')
+        <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+        </span>
+      @enderror
+      <div class="form-item flex">
+        <label for="password" class="form-label">{{__('パスワード')}}</label>
+        <input type="password" id="password" class="form-input @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}" autocomplete="password" required autofocus placeholder="パスワードを入力してください">
+      </div>
+      @error('password')
+        <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+        </span>
+      @enderror
+      <div class="form-item flex">
+        <label for="password_confirm" class="form-label">{{__('パスワード確認')}}</label>
+        <input type="password" id="password_confirm" class="form-input @error('password') is-valid @enderror" name="passowrd_confirm" value="{{ old('password_confirm') }}" autocomplete="password" required autofocus placeholder="パスワードをもう一度入力してください">
+      </div>
+      @error('password_cinfirm')
+        <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+        </span>
+      @enderror
+      <div class="form-group mt-5">
+        <button type="submit" class="btn btn-block btn-secondary">
+          {{__('会員登録')}}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+@endsection
+<!-- ここからはデフォルトのコード
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -8,6 +66,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
+                    
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -73,5 +132,5 @@
             </div>
         </div>
     </div>
-</div>
-@endsection
+</div> -->
+
