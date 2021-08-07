@@ -11,7 +11,7 @@
 
 <div class="row mb-5">                                                                           
   <div class="offset-sm-2 col-sm-8">
-    <form action="{{ route('register') }}" method="POST">
+  <form method="POST" action="{{ route('register') }}">
       @csrf
       <div class="form-item flex">
         <label for="name" class="form-label">{{ __('名前') }}</label>
@@ -25,30 +25,21 @@
       <div class="form-item flex">
         <label for="email" class="form-label">{{__('メールアドレス')}}</label>
         <input type="email" id="email" class="form-input @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" required autofocus placeholder="メールアドレスを入力してください">
+        @error('email')
+          <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+          </span>
+        @enderror
       </div>
-      @error('email')
-        <span class="invalid-feedback" role="alert">
-          <strong>{{ $message }}</strong>
-        </span>
-      @enderror
       <div class="form-item flex">
         <label for="password" class="form-label">{{__('パスワード')}}</label>
         <input type="password" id="password" class="form-input @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}" autocomplete="password" required autofocus placeholder="パスワードを入力してください">
+        @error('password')
+          <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+          </span>
+        @enderror
       </div>
-      @error('password')
-        <span class="invalid-feedback" role="alert">
-          <strong>{{ $message }}</strong>
-        </span>
-      @enderror
-      <div class="form-item flex">
-        <label for="password_confirm" class="form-label">{{__('パスワード確認')}}</label>
-        <input type="password" id="password_confirm" class="form-input @error('password') is-valid @enderror" name="passowrd_confirm" value="{{ old('password_confirm') }}" autocomplete="password" required autofocus placeholder="パスワードをもう一度入力してください">
-      </div>
-      @error('password_cinfirm')
-        <span class="invalid-feedback" role="alert">
-          <strong>{{ $message }}</strong>
-        </span>
-      @enderror
       <div class="form-group mt-5">
         <button type="submit" class="btn btn-block btn-secondary">
           {{__('会員登録')}}
