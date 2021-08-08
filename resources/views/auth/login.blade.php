@@ -1,6 +1,59 @@
-@extends('layouts.app')
+@extends('layouts.app_content')
 
 @section('content')
+<div class="text-center">
+  <p class="txt-xl headline mb-5 mt-5">{{__('ログイン')}}</p>
+</div>
+
+<div class="row mb-5">                                                                           
+  <div class="offset-sm-2 col-sm-8">
+  <form method="POST" action="{{ route('login') }}">
+      @csrf
+      <div class="form-item flex">
+        <label for="email" class="form-label">{{__('メールアドレス')}}</label>
+        <input type="email" id="email" class="form-input @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" required autofocus placeholder="メールアドレスを入力してください">
+        @error('email')
+          <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+          </span>
+        @enderror
+      </div>
+      <div class="form-item flex">
+        <label for="password" class="form-label">{{__('パスワード')}}</label>
+        <input type="password" id="password" class="form-input @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}" autocomplete="password" required autofocus placeholder="パスワードを入力してください">
+        @error('password')
+          <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+          </span>
+        @enderror
+      </div>
+      <div class="form-group row mt-3">
+        <div class="col-md-6">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                <label class="form-check-label" for="remember">
+                    {{ __('ログインしたままにする') }}
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group mt-5">
+        <button type="submit" class="btn btn-block btn-secondary">
+          {{__('ログインをする')}}
+        </button>
+        @if (Route::has('password.request'))
+          <a class="btn btn-link" href="{{ route('password.request') }}">
+              {{ __('パスワードを忘れてしまった方はこちら') }}
+          </a>
+        @endif
+      </div>
+    </form>
+  </div>
+</div>
+@endsection
+
+<!-- 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -70,4 +123,4 @@
         </div>
     </div>
 </div>
-@endsection
+ -->

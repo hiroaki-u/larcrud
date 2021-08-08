@@ -45,6 +45,9 @@
           {{__('会員登録')}}
         </button>
       </div>
+      <div>
+        <p>すでに会員登録が済んでいる方は<a class="text-primary" href="{{ route('login') }}">こちら</a></p>
+      </div>
     </form>
   </div>
 </div>
