@@ -19,7 +19,9 @@
       <img src="{{ $book->image_url }}" class="book-image-l" alt="">
       </div>
       <div class="mt-5 flex book-page-btn text-center">
-        <div class="mr-3 mb-2"><button class="submit-btn post-review-button txt-xs">レビューを書く</button></div>
+        <div class="mr-3 mb-2">
+          <button class="submit-btn post-review-button txt-xs"><a href="{{ route('review-post') }}" class="text-white">レビューを書く</a></button>
+        </div>
       </div>
     </div>
   </div>
