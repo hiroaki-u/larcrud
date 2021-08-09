@@ -10225,6 +10225,228 @@ ul {
   }
 }
 /*-----------------------*/
+/*--色の設定--*/
+/*-----------------------*/
+/*-----------------------*/
+/*--ページ全体--*/
+/*-----------------------*/
+body {
+  background-color: #ffffff;
+  word-wrap: break-word;
+}
+
+#wrap {
+  overflow: hidden;
+}
+
+.field_with_errors {
+  display: contents;
+}
+
+/*-----------------------*/
+/*--配置関連--*/
+/*-----------------------*/
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+
+.subscript {
+  vertical-align: sub;
+}
+
+@media screen and (max-width: 540px) {
+  .sm-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .md-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 960px) {
+  .lg-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .md-block {
+    display: block !important;
+  }
+}
+.md-appear {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .md-appear {
+    display: block;
+  }
+}
+.lg-appear {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .lg-appear {
+    display: block !important;
+  }
+}
+.margin-0 {
+  margin: 0;
+}
+
+.bg-gray {
+  background-color: #f9f9f9;
+}
+
+/*-----------------------*/
+/*--文字--*/
+/*-----------------------*/
+a {
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.txt-xxs {
+  font-size: 12px;
+}
+
+.txt-xs {
+  font-size: 16px;
+}
+
+.txt-s {
+  font-size: 20px;
+}
+
+.txt-m {
+  font-size: 24px;
+}
+
+.txt-l {
+  font-size: 30px;
+}
+
+.txt-xl {
+  font-size: 36px;
+}
+
+.txt-xxl {
+  font-size: 42px;
+}
+
+.txt-black {
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+}
+
+.thin-font {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.sentence-font {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  line-height: 25px;
+}
+
+/*-----------------------*/
+/*--見出し文字--*/
+/*-----------------------*/
+.headline {
+  margin: 0 auto;
+  display: inline-block;
+  box-shadow: 0 -6px 0 0 #3c6ea6 inset;
+}
+
+/*-----------------------*/
+/*--共通ボタン--*/
+/*-----------------------*/
+.submit-btn {
+  background-color: #293c6f;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 5px;
+  border: none;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+/*-----------------------*/
+/*--画像--*/
+/*-----------------------*/
+.profile-image {
+  width: 170px;
+  height: 170px;
+  border-radius: 15px;
+  border: 1px solid #dcdcdc;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+}
+
+.user-image-l {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+}
+
+.book-image {
+  width: 150px;
+  heihgt: auto;
+  border: 1px solid #dcdcdc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-image-l {
+  width: 175px;
+  heihgt: auto;
+  border: 1px solid #dcdcdc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*画面サイズ変更時の画像*/
+@media screen and (max-width: 992px) {
+  .user-image {
+    width: 65px;
+    height: 65px;
+    border-radius: 7px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: -10px;
+  }
+
+  .row {
+    margin: 0;
+  }
+}
+/*-----------------------*/
 /*--登録ページ(users/new, sessions/new)--*/
 /*-----------------------*/
 .form-item {
@@ -10390,4 +10612,625 @@ ul {
 .follow-user-name {
   display: flex;
   justify-content: space-between;
+}
+
+/*-----------------------*/
+/*--色の設定--*/
+/*-----------------------*/
+/*-----------------------*/
+/*--ページ全体--*/
+/*-----------------------*/
+body {
+  background-color: #ffffff;
+  word-wrap: break-word;
+}
+
+#wrap {
+  overflow: hidden;
+}
+
+.field_with_errors {
+  display: contents;
+}
+
+/*-----------------------*/
+/*--配置関連--*/
+/*-----------------------*/
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+
+.subscript {
+  vertical-align: sub;
+}
+
+@media screen and (max-width: 540px) {
+  .sm-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .md-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 960px) {
+  .lg-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .md-block {
+    display: block !important;
+  }
+}
+.md-appear {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .md-appear {
+    display: block;
+  }
+}
+.lg-appear {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .lg-appear {
+    display: block !important;
+  }
+}
+.margin-0 {
+  margin: 0;
+}
+
+.bg-gray {
+  background-color: #f9f9f9;
+}
+
+/*-----------------------*/
+/*--文字--*/
+/*-----------------------*/
+a {
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.txt-xxs {
+  font-size: 12px;
+}
+
+.txt-xs {
+  font-size: 16px;
+}
+
+.txt-s {
+  font-size: 20px;
+}
+
+.txt-m {
+  font-size: 24px;
+}
+
+.txt-l {
+  font-size: 30px;
+}
+
+.txt-xl {
+  font-size: 36px;
+}
+
+.txt-xxl {
+  font-size: 42px;
+}
+
+.txt-black {
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+}
+
+.thin-font {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.sentence-font {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  line-height: 25px;
+}
+
+/*-----------------------*/
+/*--見出し文字--*/
+/*-----------------------*/
+.headline {
+  margin: 0 auto;
+  display: inline-block;
+  box-shadow: 0 -6px 0 0 #3c6ea6 inset;
+}
+
+/*-----------------------*/
+/*--共通ボタン--*/
+/*-----------------------*/
+.submit-btn {
+  background-color: #293c6f;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 5px;
+  border: none;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+/*-----------------------*/
+/*--画像--*/
+/*-----------------------*/
+.profile-image {
+  width: 170px;
+  height: 170px;
+  border-radius: 15px;
+  border: 1px solid #dcdcdc;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+}
+
+.user-image-l {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+}
+
+.book-image {
+  width: 150px;
+  heihgt: auto;
+  border: 1px solid #dcdcdc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-image-l {
+  width: 175px;
+  heihgt: auto;
+  border: 1px solid #dcdcdc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*画面サイズ変更時の画像*/
+@media screen and (max-width: 992px) {
+  .user-image {
+    width: 65px;
+    height: 65px;
+    border-radius: 7px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: -10px;
+  }
+
+  .row {
+    margin: 0;
+  }
+}
+a {
+  font-weight: 300;
+}
+
+/*-----------------------*/
+/*--ヘッダー--*/
+/*-----------------------*/
+/*ナビバー*/
+header {
+  height: 75px;
+}
+
+.site-title {
+  line-height: 60px;
+  font-size: 24px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+@media screen and (max-width: 540px) {
+  .site-title {
+    display: none;
+  }
+}
+/*--検索バー-*/
+.search-bar {
+  padding: 0 40px 0 5px;
+  width: 100%;
+  position: relative;
+  top: 11px;
+}
+
+.search-btn {
+  color: #293c6f;
+  position: relative;
+  right: 35px;
+  top: 12.5px;
+  padding: 5px 7.5px;
+  height: 32.5px;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 3px solid #293c6f;
+  box-sizing: border-box;
+  padding: 6px 0;
+}
+
+.top_logo {
+  width: 60px;
+}
+
+/*通知画面*/
+.navbar-right-items {
+  margin: 0;
+  padding: 0;
+}
+
+.circle-shape {
+  position: relative;
+  top: -10px;
+  right: 10px;
+  color: #1ea0c5;
+  width: 12px;
+  height: 12px;
+}
+
+.nav-link {
+  padding: 5px 10px;
+  color: #808080;
+}
+
+/*非ログイン時*/
+/*ボタン共通*/
+.nav-btn {
+  color: #fff;
+  padding: 7.5px 20px;
+  border-radius: 5px;
+}
+
+/*登録ボタン*/
+.register-btn {
+  background-color: #ef534b;
+}
+
+/*ログインボタン*/
+.login-btn {
+  background-color: #1ea0c5;
+  margin-left: 10px;
+}
+
+/*-----------------------*/
+/*--フッター--*/
+/*-----------------------*/
+footer {
+  background-color: #31333d;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+}
+
+footer small {
+  color: #fff;
+}
+
+/*-----------------------*/
+/*--色の設定--*/
+/*-----------------------*/
+/*-----------------------*/
+/*--ページ全体--*/
+/*-----------------------*/
+body {
+  background-color: #ffffff;
+  word-wrap: break-word;
+}
+
+#wrap {
+  overflow: hidden;
+}
+
+.field_with_errors {
+  display: contents;
+}
+
+/*-----------------------*/
+/*--配置関連--*/
+/*-----------------------*/
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+
+.subscript {
+  vertical-align: sub;
+}
+
+@media screen and (max-width: 540px) {
+  .sm-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .md-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 960px) {
+  .lg-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .md-block {
+    display: block !important;
+  }
+}
+.md-appear {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .md-appear {
+    display: block;
+  }
+}
+.lg-appear {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .lg-appear {
+    display: block !important;
+  }
+}
+.margin-0 {
+  margin: 0;
+}
+
+.bg-gray {
+  background-color: #f9f9f9;
+}
+
+/*-----------------------*/
+/*--文字--*/
+/*-----------------------*/
+a {
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.txt-xxs {
+  font-size: 12px;
+}
+
+.txt-xs {
+  font-size: 16px;
+}
+
+.txt-s {
+  font-size: 20px;
+}
+
+.txt-m {
+  font-size: 24px;
+}
+
+.txt-l {
+  font-size: 30px;
+}
+
+.txt-xl {
+  font-size: 36px;
+}
+
+.txt-xxl {
+  font-size: 42px;
+}
+
+.txt-black {
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+}
+
+.thin-font {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.sentence-font {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  line-height: 25px;
+}
+
+/*-----------------------*/
+/*--見出し文字--*/
+/*-----------------------*/
+.headline {
+  margin: 0 auto;
+  display: inline-block;
+  box-shadow: 0 -6px 0 0 #3c6ea6 inset;
+}
+
+/*-----------------------*/
+/*--共通ボタン--*/
+/*-----------------------*/
+.submit-btn {
+  background-color: #293c6f;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 5px;
+  border: none;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+/*-----------------------*/
+/*--画像--*/
+/*-----------------------*/
+.profile-image {
+  width: 170px;
+  height: 170px;
+  border-radius: 15px;
+  border: 1px solid #dcdcdc;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+}
+
+.user-image-l {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+}
+
+.book-image {
+  width: 150px;
+  heihgt: auto;
+  border: 1px solid #dcdcdc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-image-l {
+  width: 175px;
+  heihgt: auto;
+  border: 1px solid #dcdcdc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*画面サイズ変更時の画像*/
+@media screen and (max-width: 992px) {
+  .user-image {
+    width: 65px;
+    height: 65px;
+    border-radius: 7px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: -10px;
+  }
+
+  .row {
+    margin: 0;
+  }
+}
+/*-----------------------*/
+/*--共通部--*/
+/*-----------------------*/
+.topwrapper {
+  background-image: url(../images/toppage.png);
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+.all-review-btn {
+  background-color: #dcecf8;
+  display: inline-block;
+  position: absolute;
+  right: 10%;
+  border-radius: 10px;
+}
+
+.all-review-btn p {
+  padding: 10px 25px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .all-review-btn p {
+    padding: 5px 15px;
+  }
+}
+.review-list {
+  background-color: #fff;
+}
+
+/*-----------------------*/
+/*--ログイン時--*/
+/*-----------------------*/
+.topwrapper-login-message {
+  font-family: "Noto Serif JP", serif;
+  position: relative;
+  top: 90px;
+  left: 80px;
+}
+
+/*-----------------------*/
+/*--非ログイン時--*/
+/*-----------------------*/
+.topwrapper-logo {
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+
+.top_logo-l {
+  width: 120px;
+}
+
+.site-title-l {
+  font-size: 40px;
+  font-family: "Josefin Sans", sans-serif;
+  position: relative;
+  top: 30px;
+}
+
+.concept-message-detail {
+  font-family: "Noto Serif JP", serif;
+  position: relative;
+  top: 90px;
+  left: 50px;
 }
