@@ -20,12 +20,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <link rel="shortcut icon" href="/images/logo.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 </head>
 <body class="">
     <div class="app app-only-content">
         {{-- ロゴ画像 --}}
         <div class="d-flex justify-content-center">
-            <a href="{{route('top')}}"><img src="/images/logo.png" /></a>
+            <a href="{{ route('top') }}"><img class="top_logo" src="/images/top_logo.png" />share-read</a>
         </div>
         {{-- コンテンツ部分 --}}
         <div class="container">

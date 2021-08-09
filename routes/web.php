@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware('auth')
+    ->group(function(){
+        Route::get('book-search', [BookController::class, 'bookSearch'])->name('book-search');
+        Route::get('books/{book}', [BookController::class, 'bookShowDetail'])->name('book');
+    });
