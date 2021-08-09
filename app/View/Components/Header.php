@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\Request;
 
 class Header extends Component
 {
@@ -23,6 +24,8 @@ class Header extends Component
      */
     public function render()
     {
-        return view('components.header');
+        // 検索キーワードを保持
+        $default = ['keyword' => Request::input('keyword', '')];
+        return view('components.header', compact('default'));
     }
 }

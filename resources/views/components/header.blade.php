@@ -4,7 +4,10 @@
       <div class="navbar-left flex">
       <a href="{{ route('home') }}"><img src="images/top_logo.png" class="top_logo mr-2" alt=""></a>
       <a href="{{ route('home') }}" class="mr-4 site-title md-none">{{ config('app.name', 'Share-read') }}</a>
-      <span>ここに検索バー</span>
+      <form action="{{ route('book-search') }}" method="GET" class="flex search-form">
+        <input type="text" name="keyword" class="form-control search-bar" placeholder="本のタイトルを記入" value="{{ old('keyword') }}">
+        <button type="submit" class="btn search-btn"><i class="fas fa-search"></i></button>
+      </form>
 
         <!-- <%= form_tag(books_search_path, method: :get, class: 'flex search-form') do %>
           <%= text_field_tag :title, @title, class: 'form-control search-bar', placeholder: '本のタイトル' %>

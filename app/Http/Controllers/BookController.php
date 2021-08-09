@@ -17,14 +17,14 @@ class BookController extends Controller
 
         $client->setApplicationId(RAKUTEN_APPLICATION_ID);
 
-        // $search_word = $request->input('keyword');
-        $search_word = "うどん";
+        $search_word = $request->input('keyword');
+        // $search_word = "うどん";
         
         $response = $client->execute('BooksTotalSearch', array(
             'keyword' => $search_word,
         ));
 
-        // 
+        // 該当するデータをbooks配列に格納
         if ($response->isOK()){
             foreach ($response as $data) {
                 $books[] = array(
@@ -37,6 +37,7 @@ class BookController extends Controller
             }
         }
 
+        // 既存のデータが入っているか判定用に用意
         $all_books = Book::all();
         $all_isbn = [];
         foreach ($all_books as $t_book){
@@ -44,6 +45,7 @@ class BookController extends Controller
         }
 
         // データの格納
+        
         foreach($books as $rakuten_book) {
             if(in_array($rakuten_book['isbn'], $all_isbn)) {
                 continue;
@@ -57,6 +59,7 @@ class BookController extends Controller
                 $book->save();
             }
         }
+
         return view('book-search',compact('all_books'));
     }
 }
