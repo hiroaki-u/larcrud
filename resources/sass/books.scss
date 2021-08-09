@@ -1,0 +1,123 @@
+@import "common";
+
+.book-page-btn {
+  align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .book-page-btn {
+    display: block !important;
+    text-align: center;
+  }
+}
+
+.register-submit-btn:focus,
+.unregister-submit-btn:focus,
+.post-review-button:focus {
+  outline: none;
+}
+
+/*-----------------------*/
+/*--レビューボタン--*/
+/*-----------------------*/
+
+.book-review-contents {
+  display: grid;
+  grid-template: auto/ 33% 33% 33%;
+}
+.book-review-content {
+  margin: 0 20px 20px 0;
+  padding: 15px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dcdcdc;
+  background-color: #fff;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/*-----------------------*/
+/*--本棚ボタン--*/
+/*-----------------------*/
+.unregister-submit-btn {
+  background-color: #ef534b;
+  color: #fff;
+  padding: 15px 56px;
+  border-radius: 5px;
+  border: none;
+}
+
+.register-submit-btn:hover,
+.unregister-submit-btn:hover {
+  opacity: 0.8;
+}
+
+.register-submit-btn {
+  background-color: #fff;
+  color: $light-red;
+  padding: 14px 31px;
+  border-radius: 5px;
+  border: 1px solid $light-red;
+}
+
+/*-----------------------*/
+/*--購入ボタン--*/
+/*-----------------------*/
+@media screen and (max-width: 992px) {
+  .purchase-btn-content {
+    margin-top: 25px;
+  }
+}
+
+
+.purchase-btn {
+  background-color: #fff;
+  color: #888888;
+  padding: 17px 31.5px;
+  border-radius: 5px;
+  border: 1px solid #888888;
+}
+
+@import "common";
+
+/*-----------------------*/
+/*--フラッシュメッセージ--*/
+/*-----------------------*/
+.f-message {
+  position: fixed;
+  top: 75px;
+  right: 5px;
+  z-index: 9;
+  border: 1px solid #dcdcdc;
+}
+.close:focus {
+  outline: none;
+}
+
+/*-----------------------*/
+/*--本の一覧表示ページ(_book_partial)--*/
+/*-----------------------*/
+.books_list {
+  display: grid;
+  grid-template: auto/ 20% 20% 20% 20% 20%;
+}
+
+.partial_book {
+  width: 80%;
+  height: 350px;
+}
+
+@media screen and (max-width: 960px) {
+  .books_list {
+    grid-template: auto/ 33% 33% 33%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .books_list {
+    grid-template: auto/ auto;
+  }
+  .partial_book {
+    width: 100%;
+    text-align: center;
+  }
+}

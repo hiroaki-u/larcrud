@@ -60,6 +60,6 @@ class BookController extends Controller
             }
         }
 
-        return view('book-search',compact('all_books'));
+        return view('book-search',compact('books','search_word'));
     }
 }

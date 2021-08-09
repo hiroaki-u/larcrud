@@ -11234,3 +11234,1025 @@ ul {
   top: 90px;
   left: 50px;
 }
+
+/*-----------------------*/
+/*--色の設定--*/
+/*-----------------------*/
+/*-----------------------*/
+/*--ページ全体--*/
+/*-----------------------*/
+body {
+  background-color: #ffffff;
+  word-wrap: break-word;
+}
+
+#wrap {
+  overflow: hidden;
+}
+
+.field_with_errors {
+  display: contents;
+}
+
+/*-----------------------*/
+/*--配置関連--*/
+/*-----------------------*/
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+
+.subscript {
+  vertical-align: sub;
+}
+
+@media screen and (max-width: 540px) {
+  .sm-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .md-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 960px) {
+  .lg-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .md-block {
+    display: block !important;
+  }
+}
+.md-appear {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .md-appear {
+    display: block;
+  }
+}
+.lg-appear {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .lg-appear {
+    display: block !important;
+  }
+}
+.margin-0 {
+  margin: 0;
+}
+
+.bg-gray {
+  background-color: #f9f9f9;
+}
+
+/*-----------------------*/
+/*--文字--*/
+/*-----------------------*/
+a {
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.txt-xxs {
+  font-size: 12px;
+}
+
+.txt-xs {
+  font-size: 16px;
+}
+
+.txt-s {
+  font-size: 20px;
+}
+
+.txt-m {
+  font-size: 24px;
+}
+
+.txt-l {
+  font-size: 30px;
+}
+
+.txt-xl {
+  font-size: 36px;
+}
+
+.txt-xxl {
+  font-size: 42px;
+}
+
+.txt-black {
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+}
+
+.thin-font {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.sentence-font {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  line-height: 25px;
+}
+
+/*-----------------------*/
+/*--見出し文字--*/
+/*-----------------------*/
+.headline {
+  margin: 0 auto;
+  display: inline-block;
+  box-shadow: 0 -6px 0 0 #3c6ea6 inset;
+}
+
+/*-----------------------*/
+/*--共通ボタン--*/
+/*-----------------------*/
+.submit-btn {
+  background-color: #293c6f;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 5px;
+  border: none;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+/*-----------------------*/
+/*--画像--*/
+/*-----------------------*/
+.profile-image {
+  width: 170px;
+  height: 170px;
+  border-radius: 15px;
+  border: 1px solid #dcdcdc;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+}
+
+.user-image-l {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+}
+
+.book-image {
+  width: 150px;
+  heihgt: auto;
+  border: 1px solid #dcdcdc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-image-l {
+  width: 175px;
+  heihgt: auto;
+  border: 1px solid #dcdcdc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*画面サイズ変更時の画像*/
+@media screen and (max-width: 992px) {
+  .user-image {
+    width: 65px;
+    height: 65px;
+    border-radius: 7px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: -10px;
+  }
+
+  .row {
+    margin: 0;
+  }
+}
+.book-page-btn {
+  align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .book-page-btn {
+    display: block !important;
+    text-align: center;
+  }
+}
+.register-submit-btn:focus,
+.unregister-submit-btn:focus,
+.post-review-button:focus {
+  outline: none;
+}
+
+/*-----------------------*/
+/*--レビューボタン--*/
+/*-----------------------*/
+.book-review-contents {
+  display: grid;
+  grid-template: auto/33% 33% 33%;
+}
+
+.book-review-content {
+  margin: 0 20px 20px 0;
+  padding: 15px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dcdcdc;
+  background-color: #fff;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/*-----------------------*/
+/*--本棚ボタン--*/
+/*-----------------------*/
+.unregister-submit-btn {
+  background-color: #ef534b;
+  color: #fff;
+  padding: 15px 56px;
+  border-radius: 5px;
+  border: none;
+}
+
+.register-submit-btn:hover,
+.unregister-submit-btn:hover {
+  opacity: 0.8;
+}
+
+.register-submit-btn {
+  background-color: #fff;
+  color: #ef534b;
+  padding: 14px 31px;
+  border-radius: 5px;
+  border: 1px solid #ef534b;
+}
+
+/*-----------------------*/
+/*--購入ボタン--*/
+/*-----------------------*/
+@media screen and (max-width: 992px) {
+  .purchase-btn-content {
+    margin-top: 25px;
+  }
+}
+.purchase-btn {
+  background-color: #fff;
+  color: #888888;
+  padding: 17px 31.5px;
+  border-radius: 5px;
+  border: 1px solid #888888;
+}
+
+/*-----------------------*/
+/*--色の設定--*/
+/*-----------------------*/
+/*-----------------------*/
+/*--ページ全体--*/
+/*-----------------------*/
+body {
+  background-color: #ffffff;
+  word-wrap: break-word;
+}
+
+#wrap {
+  overflow: hidden;
+}
+
+.field_with_errors {
+  display: contents;
+}
+
+/*-----------------------*/
+/*--配置関連--*/
+/*-----------------------*/
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+
+.subscript {
+  vertical-align: sub;
+}
+
+@media screen and (max-width: 540px) {
+  .sm-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .md-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 960px) {
+  .lg-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .md-block {
+    display: block !important;
+  }
+}
+.md-appear {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .md-appear {
+    display: block;
+  }
+}
+.lg-appear {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .lg-appear {
+    display: block !important;
+  }
+}
+.margin-0 {
+  margin: 0;
+}
+
+.bg-gray {
+  background-color: #f9f9f9;
+}
+
+/*-----------------------*/
+/*--文字--*/
+/*-----------------------*/
+a {
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.txt-xxs {
+  font-size: 12px;
+}
+
+.txt-xs {
+  font-size: 16px;
+}
+
+.txt-s {
+  font-size: 20px;
+}
+
+.txt-m {
+  font-size: 24px;
+}
+
+.txt-l {
+  font-size: 30px;
+}
+
+.txt-xl {
+  font-size: 36px;
+}
+
+.txt-xxl {
+  font-size: 42px;
+}
+
+.txt-black {
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+}
+
+.thin-font {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.sentence-font {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  line-height: 25px;
+}
+
+/*-----------------------*/
+/*--見出し文字--*/
+/*-----------------------*/
+.headline {
+  margin: 0 auto;
+  display: inline-block;
+  box-shadow: 0 -6px 0 0 #3c6ea6 inset;
+}
+
+/*-----------------------*/
+/*--共通ボタン--*/
+/*-----------------------*/
+.submit-btn {
+  background-color: #293c6f;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 5px;
+  border: none;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+/*-----------------------*/
+/*--画像--*/
+/*-----------------------*/
+.profile-image {
+  width: 170px;
+  height: 170px;
+  border-radius: 15px;
+  border: 1px solid #dcdcdc;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+}
+
+.user-image-l {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+}
+
+.book-image {
+  width: 150px;
+  heihgt: auto;
+  border: 1px solid #dcdcdc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-image-l {
+  width: 175px;
+  heihgt: auto;
+  border: 1px solid #dcdcdc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*画面サイズ変更時の画像*/
+@media screen and (max-width: 992px) {
+  .user-image {
+    width: 65px;
+    height: 65px;
+    border-radius: 7px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: -10px;
+  }
+
+  .row {
+    margin: 0;
+  }
+}
+/*-----------------------*/
+/*--フラッシュメッセージ--*/
+/*-----------------------*/
+.f-message {
+  position: fixed;
+  top: 75px;
+  right: 5px;
+  z-index: 9;
+  border: 1px solid #dcdcdc;
+}
+
+.close:focus {
+  outline: none;
+}
+
+/*-----------------------*/
+/*--本の一覧表示ページ(_book_partial)--*/
+/*-----------------------*/
+.books_list {
+  display: grid;
+  grid-template: auto/20% 20% 20% 20% 20%;
+}
+
+.partial_book {
+  width: 80%;
+  height: 350px;
+}
+
+@media screen and (max-width: 960px) {
+  .books_list {
+    grid-template: auto/33% 33% 33%;
+  }
+}
+@media screen and (max-width: 540px) {
+  .books_list {
+    grid-template: auto/auto;
+  }
+
+  .partial_book {
+    width: 100%;
+    text-align: center;
+  }
+}
+/*-----------------------*/
+/*--色の設定--*/
+/*-----------------------*/
+/*-----------------------*/
+/*--ページ全体--*/
+/*-----------------------*/
+body {
+  background-color: #ffffff;
+  word-wrap: break-word;
+}
+
+#wrap {
+  overflow: hidden;
+}
+
+.field_with_errors {
+  display: contents;
+}
+
+/*-----------------------*/
+/*--配置関連--*/
+/*-----------------------*/
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+
+.subscript {
+  vertical-align: sub;
+}
+
+@media screen and (max-width: 540px) {
+  .sm-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .md-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 960px) {
+  .lg-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .md-block {
+    display: block !important;
+  }
+}
+.md-appear {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .md-appear {
+    display: block;
+  }
+}
+.lg-appear {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .lg-appear {
+    display: block !important;
+  }
+}
+.margin-0 {
+  margin: 0;
+}
+
+.bg-gray {
+  background-color: #f9f9f9;
+}
+
+/*-----------------------*/
+/*--文字--*/
+/*-----------------------*/
+a {
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.txt-xxs {
+  font-size: 12px;
+}
+
+.txt-xs {
+  font-size: 16px;
+}
+
+.txt-s {
+  font-size: 20px;
+}
+
+.txt-m {
+  font-size: 24px;
+}
+
+.txt-l {
+  font-size: 30px;
+}
+
+.txt-xl {
+  font-size: 36px;
+}
+
+.txt-xxl {
+  font-size: 42px;
+}
+
+.txt-black {
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+}
+
+.thin-font {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.sentence-font {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  line-height: 25px;
+}
+
+/*-----------------------*/
+/*--見出し文字--*/
+/*-----------------------*/
+.headline {
+  margin: 0 auto;
+  display: inline-block;
+  box-shadow: 0 -6px 0 0 #3c6ea6 inset;
+}
+
+/*-----------------------*/
+/*--共通ボタン--*/
+/*-----------------------*/
+.submit-btn {
+  background-color: #293c6f;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 5px;
+  border: none;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+/*-----------------------*/
+/*--画像--*/
+/*-----------------------*/
+.profile-image {
+  width: 170px;
+  height: 170px;
+  border-radius: 15px;
+  border: 1px solid #dcdcdc;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+}
+
+.user-image-l {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+}
+
+.book-image {
+  width: 150px;
+  heihgt: auto;
+  border: 1px solid #dcdcdc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-image-l {
+  width: 175px;
+  heihgt: auto;
+  border: 1px solid #dcdcdc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*画面サイズ変更時の画像*/
+@media screen and (max-width: 992px) {
+  .user-image {
+    width: 65px;
+    height: 65px;
+    border-radius: 7px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: -10px;
+  }
+
+  .row {
+    margin: 0;
+  }
+}
+.txt-author {
+  color: #3c6ea6;
+}
+
+/*-----------------------*/
+/*--Reivew詳細(review/show)*/
+/*-----------------------*/
+.review-detail-box {
+  margin: 0 20px 20px 0;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.review-detail-content {
+  width: 100%;
+}
+
+.review-detail-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.draft-icon {
+  background-color: #dcecf8;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.edit-review-btn {
+  background-color: #fff;
+  color: #293c6f;
+  border: none;
+  padding: 0 !important;
+}
+
+.edit-review-btn:focus {
+  outline: none;
+}
+
+.fa-trash {
+  color: #bbbbbb;
+}
+
+@media screen and (max-width: 768px) {
+  .flex-between {
+    display: block !important;
+  }
+}
+/*-----------------------*/
+/*--投稿modal--*/
+/*-----------------------*/
+.modal {
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.modal-bg {
+  background: rgba(255, 255, 255, 0.7);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+
+.modal-content {
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 560px;
+  border: 1px solid #000000;
+}
+
+@media screen and (max-width: 568px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+.modal-header {
+  border: none;
+  padding: 10px;
+  background-color: #4a85c7;
+  color: #fff;
+  font-weight: 500;
+  border-left: 10px solid #3069b0;
+}
+
+.modal-textarea {
+  position: relative;
+  width: 100%;
+  resize: none;
+}
+
+.modal-form {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.review-submit {
+  border-radius: 3px;
+}
+
+.review-submit .submit-btn {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin: 20px;
+  position: relative;
+  right: 0;
+}
+
+.review-submit-btn {
+  background-color: #fff;
+  color: #000000;
+  padding: 10px 35px;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+.review-submit-btn:hover {
+  background-color: #293c6f;
+  color: #fff;
+  padding: 10px 35px;
+  border-radius: 5px;
+  border: none;
+}
+
+.review-submit label {
+  border: 1px solid #dcdcdc;
+  color: #999999;
+  padding: 10px 40px;
+  border-radius: 3px;
+}
+
+.review-radiobutton:checked + label,
+.review-radiobutton:focus + label {
+  border: 1px solid #ef534b;
+  color: #ef534b;
+}
+
+.review-alert {
+  display: none;
+  background-color: #ef534b;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.close-btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.close-btn:focus {
+  outline: none;
+}
+
+/*-----------------------*/
+/*--Reivewパーシャルページ(_book_review)*/
+/*-----------------------*/
+.book_review_boxs {
+  display: grid;
+  grid-template: auto/50% 50%;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .book_review_boxs {
+    display: block !important;
+  }
+}
+.book-review-box {
+  margin: 0 20px 20px 0;
+  padding: 15px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.review-content:hover {
+  opacity: 0.7;
+}
+
+.review-content-detail {
+  padding: 0;
+}
+
+.review-sub {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-delete {
+  right: 15px;
+}
+
+.favo-comment {
+  width: 50px;
+}
+
+/*-----------------------*/
+/*--お気に入りボタン(_favorite_button)--*/
+/*-----------------------*/
+.favorite-btn {
+  background-color: transparent;
+  border: none;
+  vertical-align: bottom;
+}
+
+.favorite-btn:focus {
+  outline: none;
+}
+
+.favorite-heart {
+  color: #ef534b;
+}
+
+.f-btn:active {
+  font-size: 20px;
+  position: relative;
+  top: 0.5px;
+  left: 0.5px;
+}
+
+/*-----------------------*/
+/*--コメント--*/
+/*-----------------------*/
+.comment-boxs {
+  padding: 20px;
+}
+
+.comment-box {
+  border-bottom: 1px solid #dcdcdc;
+}
