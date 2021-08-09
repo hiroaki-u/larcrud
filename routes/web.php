@@ -24,3 +24,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware('auth')
+    ->group(function(){
+        Route::get('book-search', [App\Http\Controllers\BookController::class, 'bookSearch'])->name('book-search');
+    });
