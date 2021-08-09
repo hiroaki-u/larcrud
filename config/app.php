@@ -231,4 +231,7 @@ return [
 
     ],
 
+    'rakuten_id' => env('RAKUTEN_APPLICATION_ID'),
+    'rakuten_key' => env('RAKUTEN_APPLICATION_SEACRET'),
+
 ];

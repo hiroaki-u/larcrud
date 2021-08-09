@@ -26,13 +26,15 @@ class CreateTables extends Migration
         });
 
         Schema::create('books', function (Blueprint $table){
-            $table->id();
+            $table->unsignedBiginteger('isbn');
 
             $table->string('author');
-            $table->string('genre');
-            $table->string('item_url');
+            $table->string('title');
+            $table->string('image_url');
+            $table->text('item_caption');
 
             $table->timestamps();
+            $table->primary('isbn');
         });
 
         
@@ -45,7 +47,7 @@ class CreateTables extends Migration
             $table->timestamps();
             
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('book_id')->references('id')->on('books');
+            $table->foreign('book_id')->references('isbn')->on('books');
         });
 
         Schema::create('comments', function (Blueprint $table) {
