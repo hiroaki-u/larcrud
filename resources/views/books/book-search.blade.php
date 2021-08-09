@@ -15,7 +15,7 @@
       <div class="books_list">
         @foreach($books as $book)
         <div class="partial_book">
-          <a href="{{ route('top') }}"><img src="{{ $book['image_url'] }}" class="book-image" alt=""></a>
+          <a href="{{ route('book', [$book['isbn']]) }}"><img src="{{ $book['image_url'] }}" class="book-image" alt=""></a>
           <p>{{ $book['title'] }}</p>
         </div>
         @endforeach

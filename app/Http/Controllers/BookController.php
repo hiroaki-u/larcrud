@@ -20,9 +20,13 @@ class BookController extends Controller
         $search_word = $request->input('keyword');
         // $search_word = "うどん";
         
-        $response = $client->execute('BooksTotalSearch', array(
-            'keyword' => $search_word,
-        ));
+        if(isset($search_word)){
+            $response = $client->execute('BooksTotalSearch', array(
+                'keyword' => $search_word,
+            ));
+        } else {
+            return view('books.book-search');
+        }
 
         // 該当するデータをbooks配列に格納
         if ($response->isOK()){
@@ -45,9 +49,10 @@ class BookController extends Controller
         }
 
         // データの格納
-        
         foreach($books as $rakuten_book) {
             if(in_array($rakuten_book['isbn'], $all_isbn)) {
+                continue;
+            } elseif(empty($rakuten_book['isbn'])) {
                 continue;
             } else {
                 $book = new Book();
@@ -60,6 +65,10 @@ class BookController extends Controller
             }
         }
 
-        return view('book-search',compact('books','search_word'));
+        return view('books.book-search',compact('books','search_word'));
+    }
+
+    public function bookShowDetail(Book $book){
+        return view('books.book', compact('book'));
     }
 }
