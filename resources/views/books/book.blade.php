@@ -20,7 +20,7 @@
       </div>
       <div class="mt-5 flex book-page-btn text-center">
         <div class="mr-3 mb-2">
-          <button class="submit-btn post-review-button txt-xs"><a href="{{ route('review-post') }}" class="text-white">レビューを書く</a></button>
+          <button class="submit-btn post-review-button txt-xs"><a href="{{ route('review.review-post', [$book->isbn]) }}" class="text-white">レビューを書く</a></button>
         </div>
       </div>
     </div>

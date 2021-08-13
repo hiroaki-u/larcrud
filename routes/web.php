@@ -31,12 +31,15 @@ Route::middleware('auth')
         Route::get('book-search', [BookController::class, 'bookSearch'])->name('book-search');
         Route::get('books/{book}', [BookController::class, 'bookShowDetail'])->name('book');
     });
+Route::middleware('auth')
+    ->group(function(){
+        Route::get('books/{book}/review-post', [ReviewController::class, 'postReviewForm'])->name('review.review-post');
+        Route::post('books/{book}/review-post', [ReviewController::class, 'postReview'])->name('review.review-post');
+    });
 
 Route::prefix('review')
     ->middleware('auth')
     ->group(function(){
-        Route::get('review-post', [ReviewController::class, 'postReviewForm'])->name('review-post');
-        Route::post('review-post', [ReviewController::class, 'postReview'])->name('review-post');
         Route::get('{review}/review-edit',[ReviewController::class, 'editReviewForm'])->name('review-edit');
         Route::post('{review}/review-edit',[ReviewController::class, 'editReview'])->name('review-edit');
         Route::get('{review}',[ReviewController::class, 'showReviewDetail'])->name('review-detail');
