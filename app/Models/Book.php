@@ -8,5 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
     protected $primaryKey = 'isbn';
-    
+
+    public function reviews(){
+        return $this->hasMany(Review::class, 'book_id');
+    }
 }
