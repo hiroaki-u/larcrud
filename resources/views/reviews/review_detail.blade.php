@@ -25,9 +25,10 @@
           <div>
             @if($current_user == $review->reviewer)
               <button class="post-review-button edit-review-btn"><a href="{{ route('review-edit', [$review->reviewedBook->isbn, $review->id]) }}"><i class="far fa-edit fa-lg"></i></a></button>
-              <a href="#">削除ボタン</a><%= link_to [@review.book, @review], method: :delete, data: { confirm: "削除しますか？" }, class: 'ml-2 mr-2' do  %>
-                <i class="fas fa-trash fa-lg"></i>
-              <% end %>
+              <form action="{{ route('review-delete', [$review->id]) }}" method="POST">
+                @csrf
+                <button class="ml-2 mr-2" type="submit"><i class="fas fa-trash fa-lg"></i></button>
+              </form>
             @endif
           </div>
         </div>

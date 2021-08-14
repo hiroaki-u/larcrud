@@ -59,7 +59,9 @@ class ReviewController extends Controller
         return view('reviews.review_detail', compact('current_user', 'review'));
     }
 
-    public function deleteReview(){
+    public function deleteReview(Review $review){
+        $review->delete();
 
+        return redirect('/');
     }
 }
