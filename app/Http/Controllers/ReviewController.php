@@ -39,12 +39,19 @@ class ReviewController extends Controller
         return redirect('/');
     }
 
-    public function editReviewForm(){
+    public function editReview(ReviewRequest $request){
+        $user = Auth::user();
+        $review = Review::find($request->id);
 
+        $review->content = $request->input('content');
+        $review->save();
+
+        return redirect('/');
     }
 
-    public function editReview(){
-        return view('reviews.review-edit');
+    public function editReviewForm(Book $book, Review $review){
+        $user = Auth::user();
+        return view('reviews.review_edit', compact('review', 'book', 'user'));
     }
 
     public function showReviewDetail(Review $review){

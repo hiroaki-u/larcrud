@@ -27,6 +27,8 @@ Route::middleware('auth')
     ->group(function(){
         Route::get('books/{book}/review-post', [ReviewController::class, 'postReviewForm'])->name('review.review-post');
         Route::post('books/{book}/review-post', [ReviewController::class, 'postReview'])->name('review.review-post');
+        Route::get('books/{book}/review-edit/{review}',[ReviewController::class, 'editReviewForm'])->name('review-edit');
+        Route::post('books/{book}/review-edit/{review}',[ReviewController::class, 'editReview'])->name('review-edit');
     });
 
 Route::get('/', [ReviewController::class, 'showTopPage'])->name('top');
@@ -35,8 +37,7 @@ Route::prefix('review')
     ->middleware('auth')
     ->group(function(){
         Route::get('review-list', [ReviewController::class, 'showReviewlist'])->name('review-list');
-        Route::get('{review}/review-edit',[ReviewController::class, 'editReviewForm'])->name('review-edit');
-        Route::post('{review}/review-edit',[ReviewController::class, 'editReview'])->name('review-edit');
+
         Route::get('{review}',[ReviewController::class, 'showReviewDetail'])->name('review-detail');
         Route::post('{review}/delete',[ReviewController::class, 'deleteReview'])->name('review-delete');
     });

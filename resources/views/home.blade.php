@@ -32,7 +32,7 @@
   </div>
   <div class="book_review_boxs">
   @foreach($reviews as $review)
-    @include('reviews.review_content',['review'=>$review, 'user'=>$review->reviewer])
+    @include('reviews.template.review_content',['review'=>$review, 'user'=>$review->reviewer])
   @endforeach
   </div>
 </div>
