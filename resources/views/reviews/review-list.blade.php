@@ -14,10 +14,12 @@
   </div>
   <div class="book_review_boxs">
   @foreach($reviews as $review)
-    @include('reviews.templatereview_content', ['review'=>$review, 'user'=>$review->reviewer])
+    @include('reviews.template.review_content', ['review'=>$review, 'user'=>$review->reviewer])
   @endforeach
   </div>
-  <%= paginate @reviews %>
+    <div class="d-flex justify-content-center">
+      {{ $reviews->withQueryString()->links() }}
+    </div>
 </div>
 
 @endsection
