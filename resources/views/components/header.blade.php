@@ -29,9 +29,9 @@
             <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user fa-lg"></i></a>
               <ul class="dropdown-menu dropdown-menu-right">
-                <li class="dropdown-item"><a href="{{ route('top') }}">マイページ</a></li>
+                <li class="dropdown-item"><a href="{{ route('user-page', [$user->id]) }}">マイページ</a></li>
                 <li class="dropdown-divider"></li>
-                <li class="dropdown-item"><a href="{{ route('top') }}">アカウント設定</a></li>
+                <li class="dropdown-item"><a href="{{ route('edit-mypage') }}">アカウント設定</a></li>
                 <li class="dropdown-divider"></li>
                 <li class="nav-item">
                     <a class="dropdown-item" href="{{ route('logout') }}"
@@ -39,7 +39,6 @@
                                       document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>
-
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
