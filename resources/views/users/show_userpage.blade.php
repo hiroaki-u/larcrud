@@ -15,7 +15,7 @@ MyPageの編集
       <div class="user-detail mt-3 ml-3">
         <p class="txt-m"><b>{{ $user->name }}</b></p>
         <p>年齢：{{ $user->age }} 歳</p>
-        <p>性別：{{ $user->gender }}</p>
+        <p>性別：{{ $user->gender == 0 ? '男性' : '女性' }}</p>
       </div>
     </div>
     <div class="introduction col-lg-7 mt-4">
