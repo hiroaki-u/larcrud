@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Header extends Component
 {
@@ -25,7 +26,8 @@ class Header extends Component
     public function render()
     {
         // 検索キーワードを保持
+        $user = Auth::user();
         $default = ['keyword' => Request::input('keyword', '')];
-        return view('components.header', compact('default'));
+        return view('components.header', compact('default', 'user'));
     }
 }

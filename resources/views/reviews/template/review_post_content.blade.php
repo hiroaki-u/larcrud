@@ -1,6 +1,5 @@
 <div class="p-4">
-  <textarea name="content" class="p-2 modal-textarea" id="review-textarea" placeholder="ここにレビューを記載してください（1500文字以内）" rows="10" value="{{ old('content') }}">
-    {{ $review->content }}
+  <textarea name="content" class="p-2 modal-textarea" id="review-textarea" placeholder="ここにレビューを記載してください（1500文字以内）" rows="10" value="{{ old('content') }}">@if(!empty($review->content)){{ $review->content }}@endif
   </textarea>
   <input type="hidden" name="user_id" value="{{ $user->id }}">
   <input type="hidden" name="book_id" value="{{ $book->isbn }}">

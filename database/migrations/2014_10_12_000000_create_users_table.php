@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->unsignedInteger('age')->nullable();
             $table->tinyInteger('gender')->unsigned()->comment()->nullable();
-            $table->string('user_image')->nullable()->default('default.png');
+            $table->string('user_image')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
