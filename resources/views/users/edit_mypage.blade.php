@@ -23,6 +23,7 @@ MyPageの編集
 
 <div class="row mb-5">                                               
   <div class="offset-sm-2 col-sm-8">
+    
     <form action="{{ route('edit-mypage') }}" method="POST" enctype="multipart/form-data">
       @csrf
       <div class="form-item flex">

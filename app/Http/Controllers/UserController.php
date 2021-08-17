@@ -10,7 +10,7 @@ use App\Models\Review;
 use Illuminate\Http\File;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
-use Intervention\Image\Facades\Image;
+use Image;
 
 class UserController extends Controller
 {
@@ -50,7 +50,7 @@ class UserController extends Controller
     {
         $tempPath = $this->makeTempPath();
         Image::make($file)->save($tempPath);
-        $filePath = Storage::disk('local')->putFile('user_image', new File($tempPath));
+        $filePath = Storage::disk('public')->putFile('user_image', new File($tempPath));
 
         return basename($filePath);
     }
