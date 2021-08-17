@@ -11,7 +11,6 @@ use App\Models\User;
 
 class ReviewController extends Controller
 {
-
     // レビューのリストを表示
     public function showReviewlist(){
         $reviews = Review::orderBy('updated_at', 'desc')->paginate(6);
@@ -21,6 +20,7 @@ class ReviewController extends Controller
     public function showTopPage(){
         $reviews = Review::orderBy('updated_at', 'desc')->limit(4)->get();
         return view('home', compact('reviews'));
+        
     }
 
     // レビューの投稿

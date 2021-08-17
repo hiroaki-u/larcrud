@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-
+<div class="container">
 <div class="modal-content">                                                                        
   <div class="modal-header">
     <p class="txt-m m-0">レビューを編集</p>
@@ -18,5 +18,5 @@
     </form>
   </div>
 </div>
-
+</div>
 @endsection

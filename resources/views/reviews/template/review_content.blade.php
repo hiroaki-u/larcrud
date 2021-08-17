@@ -3,7 +3,11 @@
     <a href="{{ route('review-detail', [$review->id]) }}">
       <div class="flex mb-3">
         <div> 
-        <img src="images/{{ $user->user_image }}" class="user-image" alt="">
+        @if(!empty($review->reviewer->user_image))
+          <img src="storage/user_image/{{$review->reviewer->user_image}}" class="user-image" alt="">
+        @else
+          <img src="../images/default.png" class="user-image" alt="">
+        @endif()
         </div>
         <p class="thin-font pt-2 pl-2">{{ $review->reviewer->name }}</p>
       </div>
