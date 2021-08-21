@@ -13,12 +13,12 @@ class ReviewController extends Controller
 {
     // レビューのリストを表示
     public function showReviewlist(){
-        $reviews = Review::orderBy('updated_at', 'desc')->paginate(6);
+        $reviews = Review::with(['reviewedBook', 'reviewer'])->orderBy('updated_at', 'desc')->paginate(6);
         return view('reviews.review-list', compact('reviews'));
     }
     // トップページの表示
     public function showTopPage(){
-        $reviews = Review::orderBy('updated_at', 'desc')->limit(4)->get();
+        $reviews = Review::with(['reviewedBook', 'reviewer'])->orderBy('updated_at', 'desc')->limit(4)->get();
         return view('home', compact('reviews'));
         
     }
